@@ -1,0 +1,1202 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabir Paint and Colour Matching Shop | Paint Store in Orangi Town, Karachi</title>
+    <meta name="description" content="Sabir Paint and Colour Matching Shop in Muhammad Nagar Sector 4, Orangi Town, Karachi, offering paint products, colour selection and colour-matching assistance.">
+    <meta name="keywords" content="Paint Shop in Orangi Town, Paint Store in Karachi, Colour Matching Shop Karachi, Paint and Colour Matching, Paint Shop Muhammad Nagar, Paint Products Orangi Town">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Sabir Paint and Colour Matching Shop | Orangi Town Karachi">
+    <meta property="og:description" content="Professional paint products, colour selection, and exact colour matching in Muhammad Nagar Sector 4, Orangi Town, Karachi.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_PK">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B132B',
+                        charcoal: '#1C2541',
+                        accent: '#F77F00',
+                        accentYellow: '#FCBF49',
+                        softGray: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #1C2541;
+            overflow-x: hidden;
+        }
+        .paint-gradient {
+            background: linear-gradient(135deg, #0B132B 0%, #1C2541 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #F77F00 0%, #FCBF49 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Fade in scroll animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-softGray text-charcoal antialiased selection:bg-accent selection:text-white">
+
+    <!-- 1. NAVBAR (Stuck directly at top with zero margin/gap) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md text-white shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo & Brand -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl accent-gradient flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-paint-roller text-navy text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-lg sm:text-xl font-bold tracking-tight block leading-tight">Sabir Paint</span>
+                    <span class="text-xs text-accentYellow font-medium tracking-wide">Colour Matching Shop</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-5 text-sm font-medium">
+                <a href="#home" class="hover:text-accentYellow transition-colors">Home</a>
+                <a href="#about" class="hover:text-accentYellow transition-colors">About</a>
+                <a href="#products" class="hover:text-accentYellow transition-colors">Paint Products</a>
+                <a href="#matching" class="hover:text-accentYellow transition-colors">Colour Matching</a>
+                <a href="#collection" class="hover:text-accentYellow transition-colors">Colours</a>
+                <a href="#supplies" class="hover:text-accentYellow transition-colors">Supplies</a>
+                <a href="#gallery" class="hover:text-accentYellow transition-colors">Gallery</a>
+                <a href="#faq" class="hover:text-accentYellow transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-accentYellow transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="https://wa.me/923112504070" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-semibold text-sm flex items-center space-x-2 shadow-lg transition-all hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy border-t border-white/10 px-6 pt-4 pb-6 space-y-3 shadow-2xl">
+            <a href="#home" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">Home</a>
+            <a href="#about" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">About</a>
+            <a href="#products" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">Paint Products</a>
+            <a href="#matching" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">Colour Matching</a>
+            <a href="#collection" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">Colour Collection</a>
+            <a href="#supplies" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">Painting Supplies</a>
+            <a href="#gallery" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">Gallery</a>
+            <a href="#faq" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">FAQ</a>
+            <a href="#contact" class="mobile-link block py-2 text-base font-medium hover:text-accentYellow transition-colors">Contact</a>
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/923112504070" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-xl font-semibold text-center flex items-center justify-center space-x-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>WhatsApp Us</span>
+                </a>
+                <a href="tel:03112504070" class="bg-accent hover:bg-orange-600 text-white px-4 py-3 rounded-xl font-semibold text-center flex items-center justify-center space-x-2 shadow-md">
+                    <i class="fa-solid fa-phone text-lg"></i>
+                    <span>Call Now</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="relative paint-gradient text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <!-- Background aesthetic paint splash accents with high contrast overlay -->
+        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15 text-accentYellow text-sm font-semibold">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Muhammad Nagar Sector 4, Orangi Town, Karachi</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Quality Paints & Professional Colour Matching</span> in Orangi Town
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Sabir Paint and Colour Matching Shop provides reliable paint products and precise colour-matching solutions for residential and commercial customers in Muhammad Nagar, Orangi Town, Karachi.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/923112504070" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto accent-gradient text-navy font-bold px-8 py-4 rounded-xl shadow-lg hover:opacity-95 transition-all flex items-center justify-center space-x-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>WhatsApp Us</span>
+                        </a>
+                        <a href="tel:03112504070" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-3 text-base backdrop-blur-sm">
+                            <i class="fa-solid fa-phone text-lg text-accentYellow"></i>
+                            <span>Call: 0311 2504070</span>
+                        </a>
+                    </div>
+                    <!-- Quick badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <div class="text-accentYellow font-bold text-xl">100%</div>
+                            <div class="text-xs text-gray-300">Quality Assured</div>
+                        </div>
+                        <div>
+                            <div class="text-accentYellow font-bold text-xl">Exact</div>
+                            <div class="text-xs text-gray-300">Colour Matching</div>
+                        </div>
+                        <div>
+                            <div class="text-accentYellow font-bold text-xl">Local</div>
+                            <div class="text-xs text-gray-300">Orangi Town Shop</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Image with reliable Unsplash source and dark overlay contrast -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute inset-0 accent-gradient rounded-3xl blur-xl opacity-30 transform rotate-3"></div>
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80" 
+                             alt="Paint Cans and Colour Swatches Display" 
+                             class="relative rounded-3xl shadow-2xl object-cover w-full h-[400px] border-4 border-white/20"
+                             onerror="this.src='https://placehold.co/600x400/0B132B/F77F00?text=Paint+Products';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-accent/10 rounded-3xl transform -rotate-2"></div>
+                        <img src="https://images.unsplash.com/photo-1456086272160-b28b0645b729?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFpbnQlMjBidXJzaHxlbnwwfHwwfHx8MA%3D%3D" 
+                             alt="Paint Brushes and Mixing Supplies" 
+                             class="relative rounded-2xl shadow-xl object-cover w-full h-[380px]"
+                             onerror="this.src='https://placehold.co/600x400/1C2541/FFFFFF?text=Sabir+Paint+Shop';">
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-block bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">
+                        About Sabir Paint & Colour Matching Shop
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-navy">
+                        Your Trusted Local Paint Store in Muhammad Nagar, Orangi Town
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        At Sabir Paint and Colour Matching Shop, we specialize in delivering high-quality paint products, precise colour selection, and dependable colour-matching assistance for residential and commercial projects. Located right in Muhammad Nagar Sector 4, Orangi Town, Karachi, we make it convenient for local homeowners, builders, and painters to get the exact finishes they need.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Whether you are refreshing a single room, painting an entire building exterior, or working on custom woodwork and metal surfaces, our shop provides the right paint solutions, primers, protective coatings, and essential painting accessories with helpful customer service.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start space-x-3 bg-softGray p-4 rounded-xl border border-gray-100">
+                            <div class="text-accent text-xl mt-0.5"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy">Paint Products</h4>
+                                <p class="text-xs text-gray-500 mt-1">Interior, exterior, wall, and specialty finishes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 bg-softGray p-4 rounded-xl border border-gray-100">
+                            <div class="text-accent text-xl mt-0.5"><i class="fa-solid fa-palette"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy">Colour Matching</h4>
+                                <p class="text-xs text-gray-500 mt-1">Accurate matching for your custom requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PAINT PRODUCTS -->
+    <section id="products" class="py-20 bg-softGray reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Our Inventory</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Professional Paint Products</h2>
+                <p class="text-gray-600 mt-3">Explore our diverse range of reliable paint solutions for interior walls, exterior surfaces, metal, wood, and preparatory coatings.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+            
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden card-hover flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Exterior Paints" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy mb-2">Exterior Paints</h3>
+                            <p class="text-gray-600 text-sm">Weather-resistant paint products suitable for exterior surfaces and outer walls against harsh weather.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">In Store</span>
+                            <a href="https://wa.me/923112504070?text=Hello%20Sabir%20Paint,%20I%20am%20interested%20in%20Exterior%20Paints." target="_blank" rel="noopener noreferrer" class="text-navy hover:text-accent font-bold text-sm flex items-center space-x-1">
+                                <span>Inquire</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden card-hover flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80" alt="Wall Paints" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy mb-2">Wall Paints</h3>
+                            <p class="text-gray-600 text-sm">Different paint options tailored for residential and commercial walls, offering rich textures and tones.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">In Store</span>
+                            <a href="https://wa.me/923112504070?text=Hello%20Sabir%20Paint,%20I%20am%20interested%20in%20Wall%20Paints." target="_blank" rel="noopener noreferrer" class="text-navy hover:text-accent font-bold text-sm flex items-center space-x-1">
+                                <span>Inquire</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden card-hover flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80" alt="Wood Paint" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy mb-2">Wood Paint</h3>
+                            <p class="text-gray-600 text-sm">Paint, polish, and finishing solutions designed to protect and beautify wooden doors, furniture, and fixtures.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">In Store</span>
+                            <a href="https://wa.me/923112504070?text=Hello%20Sabir%20Paint,%20I%20am%20interested%20in%20Wood%20Paint." target="_blank" rel="noopener noreferrer" class="text-navy hover:text-accent font-bold text-sm flex items-center space-x-1">
+                                <span>Inquire</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden card-hover flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1664303562514-3a923e14732e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TWV0YWwlMjBQYWludHxlbnwwfHwwfHx8MA%3D%3D" alt="Metal Paint" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy mb-2">Metal Paint</h3>
+                            <p class="text-gray-600 text-sm">Anti-rust and durable paint products suitable for gates, railings, grills, and other metal surfaces.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">In Store</span>
+                            <a href="https://wa.me/923112504070?text=Hello%20Sabir%20Paint,%20I%20am%20interested%20in%20Metal%20Paint." target="_blank" rel="noopener noreferrer" class="text-navy hover:text-accent font-bold text-sm flex items-center space-x-1">
+                                <span>Inquire</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+           
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. COLOUR MATCHING SERVICE -->
+    <section id="matching" class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Expert Colour Services</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-navy">Professional Colour Matching</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Finding the exact shade you envision shouldn't be difficult. At Sabir Paint and Colour Matching Shop, customers can visit our Orangi Town shop for comprehensive colour-related requirements and matching assistance.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Bring your sample, reference card, or design idea, and let our experienced team help you navigate shades, compare color chips, and achieve the exact match for your interior or exterior project.
+                    </p>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-softGray">
+                        <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=700&q=80" 
+                             alt="Colour Palettes and Colour Swatches" 
+                             class="w-full h-72 object-cover"
+                             onerror="this.src='https://placehold.co/600x400/0B132B/FCBF49?text=Colour+Matching';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center text-xl mb-6 shadow-md">
+                        <i class="fa-solid fa-swatchbook"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Colour Selection</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Browse through extensive colour cards and physical swatches to find the right mood and tone for your rooms.</p>
+                </div>
+
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center text-xl mb-6 shadow-md">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Colour Matching</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Get accurate colour matching assistance to replicate existing shades or match new paint to your decor.</p>
+                </div>
+
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center text-xl mb-6 shadow-md">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Shade Guidance</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Receive practical advice on how different lighting conditions and finishes affect wall shade appearances.</p>
+                </div>
+
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center text-xl mb-6 shadow-md">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Paint Colour Consultation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Consult with our knowledgeable store staff regarding combinations, accent walls, and surface pairings.</p>
+                </div>
+
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center text-xl mb-6 shadow-md">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Custom Colour Requirements</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">We cater to custom tinting and customized colour requests based on specific project needs.</p>
+                </div>
+
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center text-xl mb-6 shadow-md">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Matching Existing Colours</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Bring in a chip or sample of your faded or existing paint to match touch-ups seamlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. COLOUR COLLECTION -->
+    <section id="collection" class="py-20 bg-softGray border-y border-gray-200 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Visual Palette</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Colour Families Collection</h2>
+                <p class="text-gray-600 mt-3">Explore colour families and ask us about available shades and custom mixing options at our shop.</p>
+            </div>
+
+            <!-- CSS Generated Swatch Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- White & Off-White -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#F9F9F6] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">White & Off-White</h4>
+                </div>
+                <!-- Cream & Beige -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#EFE9D9] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Cream & Beige</h4>
+                </div>
+                <!-- Yellow -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#F4D03F] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Yellow</h4>
+                </div>
+                <!-- Orange -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#E67E22] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Orange</h4>
+                </div>
+                <!-- Red -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#C0392B] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Red</h4>
+                </div>
+                <!-- Pink -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#F1948A] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Pink</h4>
+                </div>
+                <!-- Blue -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#2980B9] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Blue</h4>
+                </div>
+                <!-- Green -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#27AE60] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Green</h4>
+                </div>
+                <!-- Brown -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#784212] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Brown</h4>
+                </div>
+                <!-- Gray -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover">
+                    <div class="w-full h-20 rounded-xl bg-[#95A5A6] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Gray</h4>
+                </div>
+                <!-- Dark Shades -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center card-hover col-span-2 sm:col-span-1">
+                    <div class="w-full h-20 rounded-xl bg-[#1C2541] border border-gray-300 mb-3 shadow-inner"></div>
+                    <h4 class="font-bold text-navy text-sm">Dark Shades</h4>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center bg-white p-6 rounded-2xl border border-gray-200 max-w-2xl mx-auto shadow-sm">
+                <p class="text-sm text-gray-700 italic">
+                    “Explore colour families and ask us about available shades. Visit Sabir Paint and Colour Matching Shop in Orangi Town to view our complete colour charts.”
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PAINTING SUPPLIES -->
+    <section id="supplies" class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Accessories & Tools</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Painting Supplies & Tools</h2>
+                <p class="text-gray-600 mt-3">Everything you need for a smooth, professional painting application from start to finish.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Supply 1 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Paint Brushes</h3>
+                        <p class="text-xs text-gray-500 mt-1">Various sizes for precision work.</p>
+                    </div>
+                </div>
+
+                <!-- Supply 2 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Paint Rollers</h3>
+                        <p class="text-xs text-gray-500 mt-1">For smooth wall coverage.</p>
+                    </div>
+                </div>
+
+                <!-- Supply 3 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-bucket"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Paint Trays</h3>
+                        <p class="text-xs text-gray-500 mt-1">Durable trays for roller loading.</p>
+                    </div>
+                </div>
+
+                <!-- Supply 4 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Sandpaper</h3>
+                        <p class="text-xs text-gray-500 mt-1">For surface smoothing.</p>
+                    </div>
+                </div>
+
+                <!-- Supply 5 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-trowel"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Scrapers</h3>
+                        <p class="text-xs text-gray-500 mt-1">For peeling and scraping old paint.</p>
+                    </div>
+                </div>
+
+                <!-- Supply 6 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-tape"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Masking Tape</h3>
+                        <p class="text-xs text-gray-500 mt-1">Clean lines and edge protection.</p>
+                    </div>
+                </div>
+
+                <!-- Supply 7 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Paint Tools</h3>
+                        <p class="text-xs text-gray-500 mt-1">Specialized application tools.</p>
+                    </div>
+                </div>
+
+                <!-- Supply 8 -->
+                <div class="bg-softGray p-6 rounded-2xl border border-gray-200 card-hover flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-xl bg-navy text-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-navy text-lg">Surface Preparation</h3>
+                        <p class="text-xs text-gray-500 mt-1">Putty and prep supplies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. WHY CHOOSE US -->
+    <section class="py-20 bg-softGray reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Our Strengths</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Why Choose Us</h2>
+                <p class="text-gray-600 mt-3">Dedicated to serving our customers in Muhammad Nagar, Orangi Town with reliable paint expertise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-2xl accent-gradient text-navy flex items-center justify-center text-2xl mb-6 shadow-md font-bold">
+                        <i class="fa-solid fa-palette text-navy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Colour Matching Assistance</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Helpful support for selecting or matching paint colours tailored to your specific project needs.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-2xl accent-gradient text-navy flex items-center justify-center text-2xl mb-6 shadow-md font-bold">
+                        <i class="fa-solid fa-boxes-stacked text-navy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Quality Paint Options</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">A dependable range of paint-related products for different residential and commercial requirements.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-2xl accent-gradient text-navy flex items-center justify-center text-2xl mb-6 shadow-md font-bold">
+                        <i class="fa-solid fa-location-dot text-navy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Convenient Local Location</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Serving customers around Muhammad Nagar and Orangi Town with easy physical access and quick communication.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 rounded-2xl accent-gradient text-navy flex items-center justify-center text-2xl mb-6 shadow-md font-bold">
+                        <i class="fa-solid fa-handshake text-navy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Customer-Focused Service</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Clear guidance based strictly on the customer's painting requirements and project scale.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm card-hover md:col-span-2 lg:col-span-2">
+                    <div class="w-14 h-14 rounded-2xl accent-gradient text-navy flex items-center justify-center text-2xl mb-6 shadow-md font-bold">
+                        <i class="fa-solid fa-award text-navy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Paint & Colour Expertise</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Focused entirely on paint products, finishes, colour selection, and colour-related needs to ensure your walls look immaculate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. HOW WE HELP -->
+    <section class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Simple Process</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">How We Help You</h2>
+                <p class="text-gray-600 mt-3">Four simple steps to get the exact paint and colour solution for your project.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 relative card-hover">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl accent-gradient text-navy font-extrabold flex items-center justify-center shadow-md">1</div>
+                    <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-clipboard-question"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Tell Us Your Requirement</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Share your paint or colour requirement with us in person or via WhatsApp.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 relative card-hover">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl accent-gradient text-navy font-extrabold flex items-center justify-center shadow-md">2</div>
+                    <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-swatchbook"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Select Your Colour</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Explore suitable colour options and charts available at our shop.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 relative card-hover">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl accent-gradient text-navy font-extrabold flex items-center justify-center shadow-md">3</div>
+                    <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Match Your Shade</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Discuss colour-matching requirements with the shop for precision.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-softGray p-8 rounded-2xl border border-gray-200 relative card-hover">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl accent-gradient text-navy font-extrabold flex items-center justify-center shadow-md">4</div>
+                    <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-box-open"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Get Your Paint Solution</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Choose the appropriate paint and accessories for your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. GALLERY -->
+    <section id="gallery" class="py-20 bg-softGray reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Visual Showcase</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Our Paint & Product Gallery</h2>
+                <p class="text-gray-600 mt-3">Explore our paint cans, colour cards, mixing displays, and painting supplies.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white cursor-pointer h-64 border border-gray-200 gallery-item" data-img="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80" alt="Paint cans and colour display" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-xl backdrop-blur-sm">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Larger</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white cursor-pointer h-64 border border-gray-200 gallery-item" data-img="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80" alt="Colour palettes and paint swatches" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-xl backdrop-blur-sm">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Larger</span>
+                        </span>
+                    </div>
+                </div>
+
+            
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white cursor-pointer h-64 border border-gray-200 gallery-item" data-img="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Wall paint application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-xl backdrop-blur-sm">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Larger</span>
+                        </span>
+                    </div>
+                </div>
+
+       
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-navy/90 backdrop-blur-md hidden items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl max-h-[85vh] overflow-hidden rounded-2xl shadow-2xl">
+            <img id="lightbox-img" src="" alt="Enlarged gallery view" class="w-full h-auto max-h-[80vh] object-contain">
+        </div>
+    </div>
+
+    <!-- 11. FAQ -->
+    <section id="faq" class="py-20 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Got Questions?</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Frequently Asked Questions</h2>
+                <p class="text-gray-600 mt-3">Find factual answers about our paint products, colour matching, and shop location.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-softGray">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-navy flex items-center justify-between focus:outline-none">
+                        <span>What type of paint products are available?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                        We stock interior paints, exterior paints, wall paints, enamel paints, primers and undercoats, wood paints, metal paints, and protective coatings suited for diverse residential and commercial projects.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-softGray">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-navy flex items-center justify-between focus:outline-none">
+                        <span>Can I ask for help choosing a paint colour?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                        Yes! Our team provides colour selection guidance and consultation to help you choose appropriate tones and finishes for your specific rooms and surfaces.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-softGray">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-navy flex items-center justify-between focus:outline-none">
+                        <span>Do you provide colour matching?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                        Yes, professional colour matching is one of our primary services. You can bring in your reference sample or colour card to match existing or custom shades.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-softGray">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-navy flex items-center justify-between focus:outline-none">
+                        <span>Can I contact the shop through WhatsApp?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                        Yes, you can easily reach us via WhatsApp at +923112504070 for product inquiries, availability questions, and colour-matching consultations.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-softGray">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-navy flex items-center justify-between focus:outline-none">
+                        <span>Where is Sabir Paint and Colour Matching Shop located?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                        Our shop is located at Muhammad Nagar Sector 4, Orangi Town, Karachi, Pakistan.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-softGray">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-navy flex items-center justify-between focus:outline-none">
+                        <span>How can I contact the shop before visiting?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                        You can call us directly at 03112504070 or send a message via WhatsApp at +923112504070 before visiting our location in Orangi Town.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. LOCATION -->
+    <section class="py-20 bg-softGray border-t border-gray-200 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Find Us</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Our Location in Orangi Town</h2>
+                <p class="text-gray-600 mt-3">Visit our shop in Muhammad Nagar Sector 4 for all your paint and colour matching requirements.</p>
+            </div>
+
+            <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-gray-200 max-w-4xl mx-auto text-center space-y-8">
+                <div class="w-16 h-16 rounded-2xl accent-gradient text-navy flex items-center justify-center text-3xl mx-auto shadow-md">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy">Sabir Paint and Colour Matching Shop</h3>
+                    <p class="text-gray-600 mt-2 text-lg">Muhammad Nagar Sector 4, Orangi Town, Karachi, Pakistan</p>
+                </div>
+                
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Sabir+Paint+and+Colour+Matching+Shop+Muhammad+Nagar+Sector+4+Orangi+Town+Karachi" target="_blank" rel="noopener noreferrer" class="accent-gradient text-navy font-bold px-6 py-3.5 rounded-xl shadow-md hover:opacity-95 transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-map-location-dot text-lg"></i>
+                        <span>Get Directions</span>
+                    </a>
+                    <a href="tel:03112504070" class="bg-navy hover:bg-charcoal text-white font-bold px-6 py-3.5 rounded-xl shadow-md transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-lg text-accentYellow"></i>
+                        <span>Call Now: 0311 2504070</span>
+                    </a>
+                    <a href="https://wa.me/923112504070" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-md transition-all flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp Chat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. CONTACT SECTION (Strictly NO IMAGES) -->
+    <section id="contact" class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-accent/10 text-accent font-semibold px-4 py-1.5 rounded-full text-sm">Get in Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-3">Contact Sabir Paint Shop</h2>
+                <p class="text-gray-600 mt-3">Reach out via phone, WhatsApp, or fill out our inquiry form to connect instantly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-softGray p-8 rounded-3xl border border-gray-200 space-y-6 shadow-sm">
+                        <h3 class="text-2xl font-bold text-navy">Direct Contact Info</h3>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy text-accent flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy text-sm">Phone Number</h4>
+                                <a href="tel:03112504070" class="text-gray-600 hover:text-accent font-medium text-base mt-1 block">0311 2504070</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy text-sm">WhatsApp</h4>
+                                <a href="https://wa.me/923112504070" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-emerald-600 font-medium text-base mt-1 block">+92 311 2504070</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy text-sm">Location</h4>
+                                <p class="text-gray-600 text-sm mt-1 leading-relaxed">Muhammad Nagar Sector 4, Orangi Town, Karachi, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <form id="whatsapp-form" class="bg-softGray p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-sm space-y-6">
+                        <h3 class="text-2xl font-bold text-navy">Send an Inquiry via WhatsApp</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-navy mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-navy focus:outline-none focus:ring-2 focus:ring-accent transition-all" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-navy mb-2">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-navy focus:outline-none focus:ring-2 focus:ring-accent transition-all" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="requirement" class="block text-sm font-semibold text-navy mb-2">Paint Requirement / Product</label>
+                            <select id="requirement" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-navy focus:outline-none focus:ring-2 focus:ring-accent transition-all">
+                                <option value="Interior Paints">Interior Paints</option>
+                                <option value="Exterior Paints">Exterior Paints</option>
+                                <option value="Wall Paints">Wall Paints</option>
+                                <option value="Enamel Paints">Enamel Paints</option>
+                                <option value="Primer & Undercoat">Primer & Undercoat</option>
+                                <option value="Wood Paint">Wood Paint</option>
+                                <option value="Metal Paint">Metal Paint</option>
+                                <option value="Colour Matching Service">Colour Matching Service</option>
+                                <option value="Painting Supplies & Accessories">Painting Supplies & Accessories</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-navy mb-2">Message Details</label>
+                            <textarea id="message" rows="4" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-navy focus:outline-none focus:ring-2 focus:ring-accent transition-all resize-none" placeholder="Describe your paint shade, quantity, or project requirement..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center space-x-2 text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Send Inquiry on WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. FINAL CTA -->
+    <section class="py-20 paint-gradient text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-accent/10 blur-3xl pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Looking for the Right Paint Colour?</h2>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto font-light">
+                Contact Sabir Paint and Colour Matching Shop for paint products and colour-matching assistance in Orangi Town, Karachi.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="https://wa.me/923112504070" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto accent-gradient text-navy font-bold px-8 py-4 rounded-xl shadow-lg hover:opacity-95 transition-all flex items-center justify-center space-x-3 text-base">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>WhatsApp Us</span>
+                </a>
+                <a href="tel:03112504070" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-3 text-base backdrop-blur-sm">
+                    <i class="fa-solid fa-phone text-lg text-accentYellow"></i>
+                    <span>Call Now: 0311 2504070</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. FOOTER -->
+    <footer class="bg-navy text-white pt-16 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl accent-gradient flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-paint-roller text-navy text-xl"></i>
+                        </div>
+                        <span class="text-lg font-bold">Sabir Paint</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Quality paint products and colour-matching assistance for customers in Muhammad Nagar, Orangi Town, Karachi.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-accentYellow">Quick Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Paint Products</a></li>
+                        <li><a href="#matching" class="hover:text-white transition-colors">Colour Matching</a></li>
+                        <li><a href="#collection" class="hover:text-white transition-colors">Colour Collection</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-accentYellow">More Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#supplies" class="hover:text-white transition-colors">Supplies</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-accentYellow">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li>
+                            <a href="tel:03112504070" class="hover:text-white transition-colors flex items-center space-x-2">
+                                <i class="fa-solid fa-phone text-accent"></i>
+                                <span>Phone: 03112504070</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/923112504070" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center space-x-2">
+                                <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                                <span>WhatsApp: +923112504070</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sabir+Paint+and+Colour+Matching+Shop+Muhammad+Nagar+Sector+4+Orangi+Town+Karachi" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-start space-x-2">
+                                <i class="fa-solid fa-location-dot text-accent mt-1"></i>
+                                <span>Muhammad Nagar Sector 4, Orangi Town, Karachi</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-gray-400">
+                <p>&copy; 2026 Sabir Paint and Colour Matching Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 z-40 bg-accent hover:bg-orange-600 text-white w-12 h-12 rounded-2xl shadow-xl hidden items-center justify-center transition-all hover:scale-110" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Navigation Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                if(icon) {
+                    icon.classList.toggle('rotate-180');
+                }
+
+                // Close others
+                faqBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.nextElementSibling.classList.add('hidden');
+                        const otherIcon = otherBtn.querySelector('i');
+                        if (otherIcon) {
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+
+        // Gallery Lightbox
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgUrl = item.getAttribute('data-img');
+                lightboxImg.src = imgUrl;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxImg.src = '';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // WhatsApp Form Submission
+        const whatsappForm = document.getElementById('whatsapp-form');
+        whatsappForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const requirement = document.getElementById('requirement').value;
+            const message = document.getElementById('message').value.trim();
+
+            const whatsappMessage = `Hello Sabir Paint and Colour Matching Shop,\n\nI would like to inquire about your paint/colour matching services.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Requirement:* ${requirement}\n*Message:* ${message}`;
+            
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappUrl = `https://wa.me/923112504070?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Scroll Reveal Animation Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Back to Top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
